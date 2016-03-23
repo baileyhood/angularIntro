@@ -1,8 +1,23 @@
 <div class="jumbotron">
   <h1>Angular Surf App</h1>
 
-  <label>Select County:
-   <select ng-model="county" ng-options="county.name for county in counties">
+  <label>Find Tide Info by County:
+   <select ng-model="county" ng-options="county.name for county in counties"> <option>Select: </option>
    </select>
-   <button type="button" ng-click="getCountyInfoCtrl(county.name)"name="button">Submit</button>
- </label><br/>
+   <button  type="button" ng-click="getCountyInfoCtrl(county.url)"name="button">Submit</button>
+ </label>
+
+ <div ng-repeat="item in info">
+   <ul class='list-group'>
+     <li class="list-group-item">county: {{item.name}}</li>
+     <li class="list-group-item">date: {{item.date}}</li>
+     <li class="list-group-item">hour: {{item.hour}}</li>
+     <li class="list-group-item">tide: {{item.tide}}</li>
+   </ul>
+ </div>
+
+ <!-- <label>Find Wind Info by County:
+  <select ng-model="county" ng-options="county.name for county in counties"> <option>Select: </option>
+  </select>
+  <button  type="button" ng-click="getWindInfoCtrl(county.url)"name="button">Submit</button>
+ </label> -->
