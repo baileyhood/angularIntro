@@ -2,19 +2,19 @@
   <h1>Angular Surf App</h1>
   <div class="form-container">
     <label>Find Tide Info by County:
-     <select ng-model="county" ng-options="county.name for county in counties"> <option>Select: </option>
+     <select class = 'form-control' ng-model="county" ng-options="county.name for county in counties"> <option>Select: </option>
      </select>
-     <button  type="button" ng-click="getCountyInfoCtrl(county.url)"name="button">Submit</button>
+     <button class= 'btn btn-default' type="button" ng-click="getCountyInfoCtrl(county.url)"name="button">Submit</button>
    </label>
   </div>
 
 
  <div ng-repeat="item in info" class = "info-container">
    <ul class='list-group'>
-     <li class="list-group-item">county: {{item.name}}</li>
-     <li class="list-group-item">date: {{item.date}}</li>
-     <li class="list-group-item">hour: {{item.hour}}</li>
-     <li class="list-group-item">tide: {{item.tide}}</li>
+     <li class="list-group-item"><span class ="info-label"> county: </span> {{item.name}}</li>
+     <li class="list-group-item"><span class ="info-label">date:</span> {{item.date}}</li>
+     <li class="list-group-item"><span class ="info-label">hour:</span> {{item.hour}}</li>
+     <li class="list-group-item"><span class ="info-label">tide: </span>{{item.tide}}</li>
    </ul>
  </div>
 
