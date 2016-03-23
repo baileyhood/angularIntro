@@ -17,11 +17,11 @@ angular
              console.log('mah data', data);
            });
          };
-    // $scope.getWindInfoCtrl = function (county) {
-    //       NewWindInfoService.getWindInfo(county)
-    //         .then(function(data){
-    //            $scope.info = data.data;
-    //            console.log('my wind data', data);
-    //          });
-    //      };
+    $scope.getWindInfoCtrl = function (county) {
+          NewWindInfoService.getWindInfo(county)
+            .then(function(data){
+               $scope.info = data.data;
+               console.log('my wind data', data);
+             });
+         };
     });

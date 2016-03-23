@@ -1,1 +1,10 @@
 
+.info-container{
+  display: inline-block;
+}
+.form-container {
+  display: block;
+}
+h1 {
+  text-align: center;
+}
